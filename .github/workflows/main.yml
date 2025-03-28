@@ -45,8 +45,6 @@ jobs:
       - name: Build Linux
         if: ${{ matrix.os == 'ubuntu-latest' }}
         run: yarn run build:linux
-        env:
-          GH_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
       - name: Upload Artifacts Linux
         uses: actions/upload-artifact@v4.3.3
         if: ${{ matrix.os == 'ubuntu-latest' }}
